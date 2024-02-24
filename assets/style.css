@@ -1,0 +1,77 @@
+.custom-bg {
+  background-color: #121212; /* Replace 'your_hex_color_code' with your desired color code */
+}
+
+.carousel-item img {
+  max-width: 1000px; 
+  height: 500px; 
+  width: 50px;
+  margin: auto; 
+}
+
+.carousel {
+  margin-top: 30px; 
+}
+
+.review-heading {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Set a fixed height */
+  border: 1px solid #ccc; /* Border style for the box */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.carousel-inner {
+  width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent; /* Set the background color of buttons to transparent */
+  border: none; /* Remove border */
+  padding: 10px; /* Adjust padding as needed */
+  cursor: pointer;
+}
+
+
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.carousel-item img {
+ /* Maintains aspect ratio */
+  box-shadow: 
+    0 0 10px rgba(10, 227, 191, 0.7), 
+    0 0 20px rgba(10, 227, 191, 0.5), 
+    0 0 30px rgba(10, 227, 191, 0.3), 
+    0 0 40px rgba(10, 227, 191, 0.2), 
+    0 0 50px rgba(10, 227, 191, 0.1);
+}
+
+.container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-nav .nav-link {
+  white-space: nowrap; /* Ensure text appears in one line */
+  font-size: 16px; /* Reduce font size */
+}

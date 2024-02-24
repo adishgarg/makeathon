@@ -6,8 +6,7 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(background.jpeg);
+	background-color: #121212;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
