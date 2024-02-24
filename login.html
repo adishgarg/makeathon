@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">      
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form class="form" method="POST" action="/register">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="name" id="name" required placeholder="Name">
+                <input type="text" name="username" id="username" required placeholder="username">
+                <input type="password" name="password" id="password" required placeholder="password">
+                <button>Sign up</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form action="/login" method="POST">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="text" name="username" id="username" placeholder="username" required>
+                <input type="password" name="password" id='password' placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
