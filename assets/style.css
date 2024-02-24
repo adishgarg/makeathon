@@ -75,3 +75,41 @@
   white-space: nowrap; /* Ensure text appears in one line */
   font-size: 16px; /* Reduce font size */
 }
+
+
+.service-card {
+  position: relative;
+  background-color: var(--white);
+  height: 100%;
+  padding: 60px 40px 40px;
+  transition: var(--transition-2);
+}
+
+.service-card .card-icon ion-icon {
+  color: var(--content-color, var(--raisin-black));
+  font-size: 6rem;
+  --ionicon-stroke-width: 15px;
+}
+
+.service-card .card-title {
+  color: var(--content-color, var(--raisin-black));
+  margin-block: 20px;
+}
+
+.service-card .card-text { color: var(--content-color); }
+
+.service-card .card-number {
+  margin-inline-start: auto;
+  font-weight: var(--fw-800);
+  line-height: 0.6;
+  max-width: max-content;
+  margin-block-start: 32px;
+  -webkit-text-stroke: 1px var(--content-color, var(--black));
+  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+}
+
+.service-card:is(:hover, :focus-within) {
+  background-color: var(--raisin-black);
+  --content-color: var(--white);
+}
