@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, url_for, session, request, j
 from flask_pymongo import PyMongo
 from web3 import Web3, HTTPProvider
 import secrets
+from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
@@ -17,22 +18,36 @@ web3 = Web3(HTTPProvider(infura_url))
 latest_block_number = web3.eth.block_number
 print("Latest block number:", latest_block_number)
 
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'adishgarg'
+app.config['MYSQL_DB'] = 'login_registers'
+mysql = MySQL(app)
+
 @app.route('/')
 def home():
-    return render_template('login.html')
+    if 'username' in session:
+        return render_template('login.html', username=session['username'])
+    else:
+        return render_template('login.html')
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET','POST'])
 def login():
-    if request.method == 'POST':
+    if request.method =='POST':
         username = request.form['username']
         pwd = request.form['password']
-        user = mongo.db.users.find_one({'username': username})
-        if user and pwd == user['password']:
-            session['username'] = user['username']
-            return redirect(url_for('login'))
+        cur = mysql.connection.cursor()
+        cur.execute(f"select username, password from information where username = '{username}'")
+        user = cur.fetchone()
+        cur.close()
+        if user and pwd == user[1]:
+            session['username'] = user[0]
+            return redirect(url_for('index'))
         else:
-            return render_template('login.html', error='Invalid username or password')
+            return render_template('login.html', error = 'invalid username or password')
+    
     return render_template('login.html')
+
 
 @app.route('/form')
 def form():

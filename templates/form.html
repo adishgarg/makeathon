@@ -10,28 +10,27 @@
 <body>
   <section class="container">
     <header>Form</header>
-    <form action="#" class="form">
+    <form action="/submit_form" method="post" class="form" action='#'>
       <div class="input-box">
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter full name" required />
+        <label for="full_name">Full Name</label>
+        <input type="text" id="full_name" name="full_name" placeholder="Enter full name" required />
       </div>
-
       <div class="column">
         <div class="input-box">
-          <label>Phone Number</label>
-          <input type="tel" placeholder="Enter phone number" required />
+          <label for="phone_number">Phone Number</label>
+          <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone number" required />
         </div>
         <div class="input-box">
-          <label>Birth Date</label>
-          <input type="date" placeholder="Enter birth date" required />
+          <label for="birth_date">Birth Date</label>
+          <input type="date" id="birth_date" name="birth_date" placeholder="Enter birth date" required />
         </div>
       </div>
       <div class="input-box address">
-        <label>Unique Land Parcel Identification Number (ULPIN)</label>
-        <input type="text" placeholder="Enter ULPIN" required />
+        <label for="ulpin">Unique Land Parcel Identification Number (ULPIN)</label>
+        <input type="text" id="ulpin" name="ulpin" placeholder="Enter ULPIN" required />
       </div>
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
-  </section>
+      </section>
 </body>
 </html>
