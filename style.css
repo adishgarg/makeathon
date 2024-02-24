@@ -1,0 +1,126 @@
+
+
+
+.center-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    text-align: center; 
+}
+
+.carousel-item img {
+    max-width: 1000px; 
+    height: 500px; 
+    width: 50px;
+    margin: auto; 
+  }
+  .carousel {
+    margin-top: 30px; 
+  }
+  .review-heading {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Set a fixed height */
+    border: 1px solid #ccc; /* Border style for the box */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+  }
+
+  .carousel-inner {
+    width: 100%;
+  }
+
+  .customer-review {
+    padding: 20px;
+    text-align: center; /* Center the text */
+  }
+
+  .customer-name {
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  .review-heading {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container:hover img {
+    opacity: 0.3; 
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    opacity: 0; /* Initially hide text */
+    transition: opacity 0.3s ease; /* Add smooth transition for opacity */
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1; /* Show text on hover */
+}
+.nav-item .nav-link {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.review-box {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.customer-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 2;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Changes the arrow color to black */
+}
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+
+}
+
+.navbar-nav .nav-link {
+  white-space: nowrap; /* Ensure text appears in one line */
+  font-size: 16px; /* Reduce font size */
+}
