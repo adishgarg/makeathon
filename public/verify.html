@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="/assets/form_style.css" />
+  <title>Form</title>
+</head>
+<body>
+  <section class="container">
+    <header>Verify Token</header>
+    <form id="tokenForm" class="form" method="POST" action="/transaction_data/:uuid">
+      <div class="input-box">
+        <label for="token">Token</label>
+        <input id="token" type="text" name="token" placeholder="Enter Token" required />
+      </div>
+      <button type="submit" onclick="fetchTransactionData()">Submit</button>
+    </form>
+    <div id="transactionData"></div> 
+  </section>
+
+  <script>
+    async function fetchTransactionData() {
+      const token = document.getElementById('token').value;
+      const response = await fetch(`/transaction_data/${token}`);
+      const data = await response.json();
+
+      document.getElementById('transactionData').innerHTML = `
+        <p>Full Name: ${data.full_name}</p>
+        <p>Phone Number: ${data.phone_number}</p>
+        <p>Birth Date: ${data.birth_date}</p>
+        <p>ULPIN: ${data.ulpin}</p>
+      `;
+    }
+  </script>
+</body>
+</html>

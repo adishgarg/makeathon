@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="/assets/form_style.css" />
+  <title>Form</title>
+  <style>
+    
+    .form button {
+      margin-top: 10px; 
+      font-size: 25px; 
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <header>Form</header>
+    <form action="/submit_form" method="POST" class="form"> 
+      <div class="input-box">
+        <label>Full Name</label>
+        <input type="text" name="full_name" placeholder="Enter full name" required /> 
+      </div>
+
+      <div class="column">
+        <div class="input-box">
+          <label>Phone Number</label>
+          <input type="tel" name="phone_number" placeholder="Enter phone number" required /> 
+        <div class="input-box">
+          <label>Birth Date</label>
+          <input type="date" name="birth_date" placeholder="Enter birth date" required /> 
+      </div>
+      <div class="input-box address">
+        <label>Unique Land Parcel Identification Number (ULPIN)</label>
+        <input type="text" name="ulpin" placeholder="Enter ULPIN" required /> 
+      <button type="submit">Submit</button>
+    </form>
+    <form action="/verification" method="GET" class="form"> 
+      <button type="submit" style="font-size: 25px; ">RVerification Page</button> 
+    </form>
+  </section>
+</body>
+</html>

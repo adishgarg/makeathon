@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "eth-lib": "^0.2.8",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "uuid": "^9.0.1",
+    "web3": "^4.5.0"
+  }
+}
